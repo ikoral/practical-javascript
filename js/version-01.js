@@ -24,6 +24,7 @@ todos.splice(3, 1); //from third item(index) one item delete.
 console.log("My Todos; last item deleted:", todos);
 
 /********Additional Examples for Array*****************/
+
 //Add item as first item to todos.
 var unshiftedItem = todos.unshift("item 1");
 console.log("My Todos; first item unshifted again:", todos);
@@ -33,3 +34,10 @@ console.log("unShifted item:", todos[0]);
 var shiftedItem = todos.shift();
 console.log("My Todos; first item deleted with shift:", todos);
 console.log("Shifted item:", shiftedItem);
+
+/*********************************************
+ ****************Version Control***************
+ *********************************************/
+const elParagraph = document.getElementById("version-control").children[0];
+elParagraph.innerHTML =
+  "You are in Version 01. Please right click, inspect and go to console, then refresh the page to see JS effects.";
