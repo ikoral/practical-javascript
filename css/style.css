@@ -8,3 +8,35 @@ body {
   margin: 0;
   background-color: #f4f4f4;
 }
+
+/*Global*/
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #2ce7bf 3px solid;
+}
+
+header #brand {
+  float: left;
+}
+
+header #brand h1 {
+  margin: 0;
+}
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight {
+  color: #2ce7bf;
+  font-weight: bold;
+}
