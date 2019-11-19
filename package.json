@@ -1,0 +1,22 @@
+{
+  "name": "practical-javascript",
+  "version": "1.0.0",
+  "description": "lerningByDoing",
+  "main": "version1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikoral/practical-javascript.git"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "ilhan koral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikoral/practical-javascript/issues"
+  },
+  "homepage": "https://github.com/ikoral/practical-javascript#readme"
+}
