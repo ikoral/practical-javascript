@@ -40,3 +40,7 @@ header .highlight {
   color: #2ce7bf;
   font-weight: bold;
 }
+
+#content {
+  width: 50%;
+}
