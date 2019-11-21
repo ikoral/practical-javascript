@@ -16,6 +16,11 @@
   console.groupEnd();
 }*/
 
+function V1_ARRAYS() {
+  console.log(" *****VERSION-01-Arrays*****");
+  //To check Example output please right click, inspect and console.
+}
+V1_ARRAYS.display = true;
 //Store todos
 var todos = ["item 1", "item 2", "item 3"];
 

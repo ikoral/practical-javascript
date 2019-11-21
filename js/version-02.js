@@ -11,11 +11,11 @@
   console.groupCollapsed("%c" + pageTitle, "font-weight:bold");
 }*/
 
-function FUNCTIONS() {
+function V2_FUNCTIONS() {
   console.log(" *****VERSION-02-Functions*****");
 }
-FUNCTIONS.display = true;
-FUNCTIONS();
+V2_FUNCTIONS.display = true;
+V2_FUNCTIONS();
 
 function sayHiTo(person) {
   console.log("hi", person);
