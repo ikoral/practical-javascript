@@ -14,7 +14,7 @@ V3_OBJECTS();
 //     console.log(this.name);
 //   }
 // };
-function objTodoList() {
+function objTodoListV3() {
   var todoList = {
     todos: ["item 1", "item 2", "item 3"],
     displayTodos: function() {
@@ -36,16 +36,5 @@ function objTodoList() {
   return todoList;
 }
 
-objTodoList.display = true;
-console.log(objTodoList());
-
-/*****evaluates********/
-evaluate(V1_ARRAYS);
-evaluate(V2_FUNCTIONS);
-evaluate(sayHiTo);
-evaluate(displayTodos);
-evaluate(addTodo);
-evaluate(changeTodo);
-evaluate(deleteTodo);
-evaluate(V3_OBJECTS);
-evaluate(objTodoList);
+objTodoListV3.display = true;
+console.log(objTodoListV3());
