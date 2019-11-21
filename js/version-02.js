@@ -64,6 +64,11 @@ function sayName() {
 //console.log(secret); //Reference Error.
 sayName();
 
+{
+  document.body.appendChild(document.createElement("hr"));
+  console.groupEnd();
+}
+
 /*********************************************
  ****************Version Control***************
  ********************************************

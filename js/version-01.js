@@ -51,6 +51,11 @@ arrayExample();
 arrayExample.display = true;
 evaluate(arrayExample);
 
+{
+  document.body.appendChild(document.createElement("hr"));
+  console.groupEnd();
+}
+
 /*********************************************
  ****************Version Control***************
  *********************************************/
