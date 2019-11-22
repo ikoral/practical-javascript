@@ -1,6 +1,6 @@
 /*************************************
- *************VERSION-05 **************
- **********OBJECTS-for Loops***********
+ *************VERSION-06 **************
+ **********V5_LOOPS_OF_LOGIC***********
  **************************************/
 function V5_LOOPS_OF_LOGIC() {
   console.log(" *****VERSION-05-LoopsOfLogic*****");
@@ -51,18 +51,3 @@ function objTodoListV5() {
 }
 objTodoListV5.display = true;
 console.log(objTodoListV5());
-
-/*****evaluates********/
-evaluate(V1_ARRAYS);
-evaluate(V2_FUNCTIONS);
-evaluate(sayHiTo);
-evaluate(displayTodos);
-evaluate(addTodo);
-evaluate(changeTodo);
-evaluate(deleteTodo);
-evaluate(V3_OBJECTS);
-evaluate(objTodoListV3);
-evaluate(V4_BOOLEANS);
-evaluate(objTodoListV4);
-evaluate(V5_LOOPS_OF_LOGIC);
-evaluate(objTodoListV5);
