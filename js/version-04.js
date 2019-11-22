@@ -36,16 +36,3 @@ function objTodoListV4() {
 }
 objTodoListV4.display = true;
 console.log(objTodoListV4());
-
-/*****evaluates********/
-evaluate(V1_ARRAYS);
-evaluate(V2_FUNCTIONS);
-evaluate(sayHiTo);
-evaluate(displayTodos);
-evaluate(addTodo);
-evaluate(changeTodo);
-evaluate(deleteTodo);
-evaluate(V3_OBJECTS);
-evaluate(objTodoListV3);
-evaluate(V4_BOOLEANS);
-evaluate(objTodoListV4);
