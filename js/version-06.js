@@ -77,19 +77,3 @@ function objTodoListV6() {
 objTodoListV6.display = true;
 console.log(objTodoListV6());
 
-/*****evaluates********/
-evaluate(V1_ARRAYS);
-evaluate(V2_FUNCTIONS);
-evaluate(sayHiTo);
-evaluate(displayTodos);
-evaluate(addTodo);
-evaluate(changeTodo);
-evaluate(deleteTodo);
-evaluate(V3_OBJECTS);
-evaluate(objTodoListV3);
-evaluate(V4_BOOLEANS);
-evaluate(objTodoListV4);
-evaluate(V5_LOOPS_OF_LOGIC);
-evaluate(objTodoListV5);
-evaluate(V6_THINKING_IN_CODE);
-evaluate(objTodoListV6);
