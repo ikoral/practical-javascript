@@ -1,11 +1,14 @@
 /*************************************
- *************VERSION-07 **************
- ************HTML AND DOM***********
+ *************VERSION-08 **************
+ *********GETTING DATA FROM INPUT******
  **************************************/
+
 
  /************Here is to run program. I use myTodoList for page.********************/
 
- /*
+ /*We created todo list object, all todo will be stored one of the property (array) of object
+ and all methods for CRUD regarding todos again property of this object*/
+
  var myTodoList = {
     todos: [],
     displayTodos: function() {
@@ -69,8 +72,11 @@
     }
   };
 
+  //BELOW CODE FROM VERSION 07 BUT WE REFACTOR IT IN HERE VERSION 08
+  //IN HTML ALSO CHECK BUTTONS
+
   //We want to get access to display todos button.
-  var addSomeTodos = document.getElementById("addSomeTodos");
+  /*var addSomeTodos = document.getElementById("addSomeTodos");
   var displayTodosButton = document.getElementById("displayTodosButton");
   var toggleAllButton = document.getElementById("toggleAllButton");
   console.log(displayTodosButton);
@@ -88,18 +94,39 @@
 
   toggleAllButton.addEventListener("click", function() {
     myTodoList.toggleAll();
-  });
-*/
-/************Here is to show source code on page. I use todoList object for this purpose********************/
-function V7_HTML_AND_DOM() {
-  console.log(" *****VERSION-07-HTML And DOM*****");
+  });*/
+
+var handlers = {
+    displayTodos: function(){
+        myTodoList.displayTodos();
+    },
+    toggleAll: function(){
+        myTodoList.toggleAll();
+    },
+    addTodo: function(){
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        myTodoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+      }
 }
 
-V7_HTML_AND_DOM.display = true;
-V7_HTML_AND_DOM();
 
-function objTodoListV7() {
-  var todoList = {
+
+//write code to the pre element
+var sourceElv8 = document.createElement("pre")
+var elCode = document.createElement("code");
+sourceElv8.className = 'language-js line-numbers'
+code.className = 'language-js';
+elCode.innerHTML = code;
+var source_code = elCode.innerHTML
+source_code = source_code.substring(22, source_code.length - 2);
+elCode.innerHTML = source_code;
+sourceElv8.appendChild(elCode);
+document.getElementById('sourceCode').appendChild(sourceElv8);
+
+//coach rob advised. not call function.
+function code() {
+    var myTodoList = {
     todos: [],
     displayTodos: function() {
       if (this.todos.length === 0) {
@@ -160,49 +187,20 @@ function objTodoListV7() {
       }
       this.displayTodos();
     }
-  };
-}
+  
+    }
 
-objTodoListV7.display = true;
-console.log(objTodoListV7());
-
-function accessingDOM_V7() {
-  //We want to get access to display todos button.
-  var displayTodosButton = document.getElementById("displayTodosButton");
-  var toggleAllButton = document.getElementById("toggleAllButton");
-  console.log(displayTodosButton);
-  console.log(toggleAllButton);
-  //We want to run displayTodos methods, when someone clicks the display
-  //todos button.
-
-  /*****I SET IT AS COMMENT TO AVOID FRACTION ON PURPOSE********/
-  /*displayTodosButton.addEventListener("click", function() {
-    todoList.displayTodos();
-  });*/
-
-
-
-}
-
-accessingDOM_V7.display = true;
-console.log(accessingDOM_V7());
-
-/*****evaluates********/
-evaluate(V1_ARRAYS);
-evaluate(V2_FUNCTIONS);
-evaluate(sayHiTo);
-evaluate(displayTodos);
-evaluate(addTodo);
-evaluate(changeTodo);
-evaluate(deleteTodo);
-evaluate(V3_OBJECTS);
-evaluate(objTodoListV3);
-evaluate(V4_BOOLEANS);
-evaluate(objTodoListV4);
-evaluate(V5_LOOPS_OF_LOGIC);
-evaluate(objTodoListV5);
-evaluate(V6_THINKING_IN_CODE);
-evaluate(objTodoListV6);
-evaluate(V7_HTML_AND_DOM);
-evaluate(objTodoListV7);
-evaluate(accessingDOM_V7);
+    var handlers = {
+        displayTodos: function(){
+            myTodoList.displayTodos();
+        },
+        toggleAll: function(){
+            myTodoList.toggleAll();
+        },
+        addTodo: function(){
+            var addTodoTextInput = document.getElementById('addTodoTextInput');
+            myTodoList.addTodo(addTodoTextInput.value);
+            addTodoTextInput.value = '';
+          }
+    }
+};
