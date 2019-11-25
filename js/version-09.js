@@ -118,8 +118,24 @@ var view = {
     var todosUl = document.querySelector("ul");
     todosUl.innerHTML = "";
     for (let i = 0; i < myTodoList.todos.length; i++) {
-      var todoLi = document.createElement("li");
-      todoLi.textContent = myTodoList.todos[i].todoText;
+      let todoLi = document.createElement("li");
+      let todo = myTodoList.todos[i];
+      let todoTextWithCompletion = '';
+      // '(x)' todoText
+      // let todoTextWithCompletion
+      // if (todo.completed === true)
+        //(x) todoText
+      //else
+        //() todoText
+      //todoLi.textContent = todoTextWithCompletion
+      
+      if (todo.completed === true) {
+        todoTextWithCompletion = '(x) ' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( ) ' + todo.todoText;
+      }
+
+      todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
     }
   }
@@ -182,7 +198,7 @@ function code09() {
     toggleAll: function() {
       var totalTodos = this.todos.length;
       var CompletedTodos = 0;
-  
+
       //Get number of completed todos.
       for (var i = 0; i < totalTodos; i++) {
         if (this.todos[i].completed === true) {
@@ -203,7 +219,7 @@ function code09() {
       this.displayTodos();
     }
   };
-  
+
   //We are using this object for buttons.
   var handlers = {
     displayTodos: function() {
@@ -244,14 +260,31 @@ function code09() {
       toggleCompletedPositionInput = "";
     }
   };
-  
+
   //This view object for unordered list(ul) to show our todo list
   var view = {
     displayTodos: function() {
       var todosUl = document.querySelector("ul");
       todosUl.innerHTML = "";
       for (let i = 0; i < myTodoList.todos.length; i++) {
-        var todoLi = document.createElement("li");
+        let todoLi = document.createElement("li");
+        let todo = myTodoList.todos[i];
+        let todoTextWithCompletion = '';
+        // '(x)' todoText
+        // let todoTextWithCompletion
+        // if (todo.completed === true)
+          //(x) todoText
+        //else
+          //() todoText
+        //todoLi.textContent = todoTextWithCompletion
+        
+        if (todo.completed === true) {
+          todoTextWithCompletion = '(x) ' + todo.todoText;
+        } else {
+          todoTextWithCompletion = '( ) ' + todo.todoText;
+        }
+
+        todoLi.textContent = todoTextWithCompletion;
         todosUl.appendChild(todoLi);
       }
     }
