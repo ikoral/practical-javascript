@@ -8,7 +8,7 @@
 /*We created todo list object, all todo will be stored one of the property (array) of object
  and all methods for CRUD regarding todos again property of this object*/
 
-var myTodoList = {
+/*var myTodoList = {
   todos: [],
   displayTodos: function() {
     if (this.todos.length === 0) {
@@ -69,7 +69,7 @@ var myTodoList = {
     }
     this.displayTodos();
   }
-};
+};*/
 
 //BELOW CODE FROM VERSION 07 BUT WE REFACTOR IT IN HERE VERSION 08
 //IN HTML ALSO CHECK BUTTONS
@@ -95,7 +95,7 @@ var myTodoList = {
     myTodoList.toggleAll();
   });*/
 
-var handlers = {
+/*var handlers = {
   displayTodos: function() {
     myTodoList.displayTodos();
   },
@@ -133,23 +133,23 @@ var handlers = {
     myTodoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
     toggleCompletedPositionInput = "";
   }
-};
+};*/
 
 //BELOW CODE ONLY SHOW SOURCE CODE ON THE HTML PAGE.
 //write code to the pre element
 var sourceElv8 = document.createElement("pre");
 var elCode = document.createElement("code");
 sourceElv8.className = "language-js line-numbers";
-code.className = "language-js";
-elCode.innerHTML = code;
+elCode.className = "language-js";
+elCode.innerHTML = code08;
 var source_code = elCode.innerHTML;
-source_code = source_code.substring(23, source_code.length - 2);
+source_code = source_code.substring(22, source_code.length - 2);
 elCode.innerHTML = source_code;
 sourceElv8.appendChild(elCode);
-document.getElementById("sourceCode").appendChild(sourceElv8);
+document.getElementById("divVersion08").appendChild(sourceElv8);
 
 //coach rob advised. not call function.
-function code() {
+function code08() {
   var myTodoList = {
     todos: [],
     displayTodos: function() {
