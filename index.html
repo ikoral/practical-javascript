@@ -30,9 +30,44 @@
       <div id="content">
         <h1>Todo List!</h1>
         <p>Please right click inspect and goto console to see effects.</p>
-        <button id= "addSomeTodos">Add Some Todos</button>
+        <!--I CHANGED BELOW CODE FOR REFACTORING COMPARE TO VERSION 7, I REMOVED ID AND ADD ONCLICK METHOD
+        AAND FOR ONCLICK METHOD I USED handlers object methods INSIDE version-08.js FILE.-->
+
+        <!--<button id= "addSomeTodos">Add Some Todos</button>
         <button id="displayTodosButton">Display Todos</button>
-        <button id="toggleAllButton">Toggle All</button>
+        <button id="toggleAllButton">Toggle All</button>-->
+
+        <div>
+          <button onclick="handlers.displayTodos()">Display Todos</button>
+          <button onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+        <div>
+          <button onclick="handlers.addTodo()">Add</button>
+          <input id="addTodoTextInput" type="text" />
+        </div>
+        <div>
+          <button onclick="handlers.changeTodo()">Change Todo</button>
+          <input id = "changeTodoPositionInput" type="number">
+          <input id = "changeTodoTextInput">
+        </div>
+        <div>
+          <button onclick="handlers.deleteTodo()">Delete Todo</button>
+          <input id = "deleteTodoPositionInput" type = "number">
+        </div>
+        <div>
+          <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+          <input id = "toggleCompletedPositionInput" type = "number">
+        </div>
+        
+      </div>
+    </section>
+    <section class="container">
+      <div id="sourceCode">
+        <h1>
+          <stan style="color:brown"><bold>version-08:</bold></stan> Show Code
+          with Pre Element! Using Prism, Add pre element from version-08.js
+          dynamically. Thanks Coach Rob for tip!.
+        </h1>
       </div>
     </section>
     <footer>
@@ -45,5 +80,6 @@
     <script src="./js/version-05.js"></script>
     <script src="./js/version-06.js"></script>
     <script src="./js/version-07.js"></script>
+    <script src="./js/version-08.js"></script>
   </body>
 </html>

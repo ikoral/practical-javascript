@@ -5,6 +5,7 @@
 
  /************Here is to run program. I use myTodoList for page.********************/
 
+ /*
  var myTodoList = {
     todos: [],
     displayTodos: function() {
@@ -88,7 +89,7 @@
   toggleAllButton.addEventListener("click", function() {
     myTodoList.toggleAll();
   });
-
+*/
 /************Here is to show source code on page. I use todoList object for this purpose********************/
 function V7_HTML_AND_DOM() {
   console.log(" *****VERSION-07-HTML And DOM*****");
