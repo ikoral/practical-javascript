@@ -38,7 +38,7 @@
         <button id="toggleAllButton">Toggle All</button>-->
 
         <div>
-          <button onclick="handlers.displayTodos()">Display Todos</button>
+          <!--<button onclick="handlers.displayTodos()">Display Todos</button>-->
           <button onclick="handlers.toggleAll()">Toggle All</button>
         </div>
         <div>
@@ -47,27 +47,38 @@
         </div>
         <div>
           <button onclick="handlers.changeTodo()">Change Todo</button>
-          <input id = "changeTodoPositionInput" type="number">
-          <input id = "changeTodoTextInput">
+          <input id="changeTodoPositionInput" type="number" />
+          <input id="changeTodoTextInput" />
         </div>
         <div>
           <button onclick="handlers.deleteTodo()">Delete Todo</button>
-          <input id = "deleteTodoPositionInput" type = "number">
+          <input id="deleteTodoPositionInput" type="number" />
         </div>
         <div>
           <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-          <input id = "toggleCompletedPositionInput" type = "number">
+          <input id="toggleCompletedPositionInput" type="number" />
         </div>
-        
+        <div>
+          <ul></ul>
+        </div>
       </div>
     </section>
     <section class="container">
       <div id="sourceCode">
-        <h1>
-          <stan style="color:brown"><bold>version-08:</bold></stan> Show Code
-          with Pre Element! Using Prism, Add pre element from version-08.js
-          dynamically. Thanks Coach Rob for tip!.
-        </h1>
+        <h3>
+          Show Code with <stan style="color:brown"><bold>Pre Element! </bold></stan>
+          using Prism, add pre element from "js files" dynamically. Thanks Coach Rob for tip!
+        </h3>
+        <div class="accordion">
+          <input id="tab-1" type="checkbox" name="tab" />
+          <label for="tab-1">Please check version-08 code!</label>
+          <div id="divVersion08" class="accordion_content"></div>
+        </div>
+        <div class="accordion">
+            <input id="tab-2" type="checkbox" name="tab" />
+            <label for="tab-2">Please check version-09 code!</label>
+            <div id="divVersion09" class="accordion_content"></div>
+          </div>
       </div>
     </section>
     <footer>
@@ -81,5 +92,6 @@
     <script src="./js/version-06.js"></script>
     <script src="./js/version-07.js"></script>
     <script src="./js/version-08.js"></script>
+    <script src="./js/version-09.js"></script>
   </body>
 </html>

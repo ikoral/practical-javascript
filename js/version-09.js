@@ -1,6 +1,6 @@
 /*************************************
- *************VERSION-08 **************
- *********GETTING DATA FROM INPUT******
+ *************VERSION-09 **************
+ *********ESCAPE FROM THE CONSOLE******
  **************************************/
 
 /************Here is to run program. I use myTodoList for page.********************/
@@ -8,9 +8,10 @@
 /*We created todo list object, all todo will be stored one of the property (array) of object
  and all methods for CRUD regarding todos again property of this object*/
 
-/*var myTodoList = {
+var myTodoList = {
   todos: [],
-  displayTodos: function() {
+  //we don't need any more this function. We don't need to display on console.
+  /*displayTodos: function() {
     if (this.todos.length === 0) {
       console.log("Your todo list is empty!");
     } else {
@@ -24,27 +25,27 @@
         }
       }
     }
-  },
+  },*/
   addTodo: function(todoText) {
     this.todos.push({
       todoText: todoText,
       completed: false
     });
-    this.displayTodos();
+    //this.displayTodos();
   },
   changeTodo: function(position, todoText) {
     //this.todos[position] = newValue;
     this.todos[position].todoText = todoText;
-    this.displayTodos();
+    //this.displayTodos();
   },
   deleteTodo: function(position) {
     this.todos.splice(position, 1);
-    this.displayTodos();
+    //this.displayTodos();
   },
   toggleCompleted: function(position) {
     var todo = this.todos[position];
     todo.completed = !todo.completed;
-    this.displayTodos();
+    //this.displayTodos();
   },
   toggleAll: function() {
     var totalTodos = this.todos.length;
@@ -67,45 +68,25 @@
         this.todos[j].completed = true;
       }
     }
-    this.displayTodos();
+    //this.displayTodos();
   }
-};*/
+};
 
-//BELOW CODE FROM VERSION 07 BUT WE REFACTOR IT IN HERE VERSION 08
-//IN HTML ALSO CHECK BUTTONS
-
-//We want to get access to display todos button.
-/*var addSomeTodos = document.getElementById("addSomeTodos");
-  var displayTodosButton = document.getElementById("displayTodosButton");
-  var toggleAllButton = document.getElementById("toggleAllButton");
-  console.log(displayTodosButton);
-  console.log(toggleAllButton);
-  //We want to run displayTodos methods, when someone clicks the display
-  //todos button.
-  addSomeTodos.addEventListener("click", function() {
-    myTodoList.addTodo('first Dummy Todo');
-    myTodoList.addTodo('second Dummy Todo');
-  });
-
-  displayTodosButton.addEventListener("click", function() {
+//We are using this object for buttons.
+var handlers = {
+  //we don't need any more to display on console.
+  /*displayTodos: function() {
     myTodoList.displayTodos();
-  });
-
-  toggleAllButton.addEventListener("click", function() {
-    myTodoList.toggleAll();
-  });*/
-
-/*var handlers = {
-  displayTodos: function() {
-    myTodoList.displayTodos();
-  },
+  },*/
   toggleAll: function() {
     myTodoList.toggleAll();
+    view.displayTodos();
   },
   addTodo: function() {
     var addTodoTextInput = document.getElementById("addTodoTextInput");
     myTodoList.addTodo(addTodoTextInput.value);
     addTodoTextInput.value = "";
+    view.displayTodos();
   },
   changeTodo: function() {
     var changeTodoPositionInput = document.getElementById(
@@ -118,6 +99,7 @@
     );
     changeTodoTextInput.value = "";
     changeTodoPositionInput.value = "";
+    view.displayTodos();
   },
   deleteTodo: function() {
     var deleteTodoPositionInput = document.getElementById(
@@ -125,6 +107,7 @@
     );
     myTodoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
     deleteTodoPositionInput.value = "";
+    view.displayTodos();
   },
   toggleCompleted: function() {
     var toggleCompletedPositionInput = document.getElementById(
@@ -132,24 +115,55 @@
     );
     myTodoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
     toggleCompletedPositionInput = "";
+    view.displayTodos();
   }
-};*/
+};
+
+//This view object for unordered list(ul) to show our todo list
+var view = {
+  displayTodos: function() {
+    var todosUl = document.querySelector("ul");
+    todosUl.innerHTML = "";
+    for (let i = 0; i < myTodoList.todos.length; i++) {
+      let todoLi = document.createElement("li");
+      let todo = myTodoList.todos[i];
+      let todoTextWithCompletion = '';
+      // '(x)' todoText
+      // let todoTextWithCompletion
+      // if (todo.completed === true)
+        //(x) todoText
+      //else
+        //() todoText
+      //todoLi.textContent = todoTextWithCompletion
+      
+      if (todo.completed === true) {
+        todoTextWithCompletion = '(x) ' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( ) ' + todo.todoText;
+      }
+
+      todoLi.textContent = todoTextWithCompletion;
+      todosUl.appendChild(todoLi);
+    }
+  }
+};
 
 //BELOW CODE ONLY SHOW SOURCE CODE ON THE HTML PAGE.
 //write code to the pre element
-var sourceElv8 = document.createElement("pre");
-var elCode = document.createElement("code");
-sourceElv8.className = "language-js line-numbers";
-elCode.className = "language-js";
-elCode.innerHTML = code08;
-var source_code = elCode.innerHTML;
-source_code = source_code.substring(22, source_code.length - 2);
-elCode.innerHTML = source_code;
-sourceElv8.appendChild(elCode);
-document.getElementById("divVersion08").appendChild(sourceElv8);
+var sourceElv9 = document.createElement("pre");
+var elCode09 = document.createElement("code");
+sourceElv9.className = "language-js line-numbers";
+elCode09.className = "language-js";
+elCode09.innerHTML = code09;
+var source_code09 = elCode09.innerHTML;
+source_code09 = source_code09.substring(22, source_code09.length - 2);
+elCode09.innerHTML = source_code09;
+sourceElv9.appendChild(elCode09);
+document.getElementById("divVersion09").appendChild(sourceElv9);
 
 //coach rob advised. not call function.
-function code08() {
+function code09() {
+  //VERSION-09
   var myTodoList = {
     todos: [],
     displayTodos: function() {
@@ -213,6 +227,7 @@ function code08() {
     }
   };
 
+  //We are using this object for buttons.
   var handlers = {
     displayTodos: function() {
       myTodoList.displayTodos();
@@ -250,6 +265,35 @@ function code08() {
       );
       myTodoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
       toggleCompletedPositionInput = "";
+    }
+  };
+
+  //This view object for unordered list(ul) to show our todo list
+  var view = {
+    displayTodos: function() {
+      var todosUl = document.querySelector("ul");
+      todosUl.innerHTML = "";
+      for (let i = 0; i < myTodoList.todos.length; i++) {
+        let todoLi = document.createElement("li");
+        let todo = myTodoList.todos[i];
+        let todoTextWithCompletion = '';
+        // '(x)' todoText
+        // let todoTextWithCompletion
+        // if (todo.completed === true)
+          //(x) todoText
+        //else
+          //() todoText
+        //todoLi.textContent = todoTextWithCompletion
+        
+        if (todo.completed === true) {
+          todoTextWithCompletion = '(x) ' + todo.todoText;
+        } else {
+          todoTextWithCompletion = '( ) ' + todo.todoText;
+        }
+
+        todoLi.textContent = todoTextWithCompletion;
+        todosUl.appendChild(todoLi);
+      }
     }
   };
 }
