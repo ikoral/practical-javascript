@@ -160,10 +160,10 @@
       //   todosUl.appendChild(todoLi);
       // }
 
-      /***Here we are using again forEach but for each call calback function inside it.
-       This callback function isnt directly method of view object. So in this case
+      /***Here we are using again forEach but for each call callback function inside it.
+       This callback function is not directly method of view object. So in this case
        when we execute teh code we get this.createDeleteButton is not a function error
-       so we need to spacify tis statement as a parameter for forEach statement.***/
+       so we need to specify tis statement as a parameter for forEach statement.***/
        
        //array.forEach(function{},this) Check MDN documentation.
 
