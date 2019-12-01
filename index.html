@@ -1,105 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Practical-JS | ilhan</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Practical Java Script, learning by doing Java Script"
-    />
-    <meta name="keywords" content="JS, JavaScript, Java Script, JS project" />
-    <meta name="author" content="ILHAN KORAL" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/codeStyle.css" />
-    <script src="./js/control/evaluate.js"></script>
-    <script src="./js/prism/script.js"></script>
-    <link rel="stylesheet" href="./js/prism/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="brand">
-          <h1><span class="highlight">ilhan</span> JS3 week 1</h1>
-        </div>
-        <nav></nav>
+
+<head>
+  <title>Practical-JS | ilhan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Practical Java Script, learning by doing Java Script" />
+  <meta name="keywords" content="JS, JavaScript, Java Script, JS project" />
+  <meta name="author" content="ILHAN KORAL" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/codeStyle.css" />
+  <script src="./js/control/evaluate.js"></script>
+  <script src="./js/prism/script.js"></script>
+  <link rel="stylesheet" href="./js/prism/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="brand">
+        <h1><span class="highlight">ilhan</span> JS3 week 1</h1>
       </div>
-    </header>
-    <section class="container">
-      <div id="content">
-        <h1>Todo List!</h1>
-        <p>Please right click inspect and goto console to see effects.</p>
-        <!--I CHANGED BELOW CODE FOR REFACTORING COMPARE TO VERSION 7, I REMOVED ID AND ADD ONCLICK METHOD
+      <nav></nav>
+    </div>
+  </header>
+  <section class="container">
+    <div id="content">
+      <h1>Todo List!</h1>
+      <p>Please right click inspect and goto console to see effects.</p>
+      <!--I CHANGED BELOW CODE FOR REFACTORING COMPARE TO VERSION 7, I REMOVED ID AND ADD ONCLICK METHOD
         AAND FOR ONCLICK METHOD I USED handlers object methods INSIDE version-08.js FILE.-->
 
-        <!--<button id= "addSomeTodos">Add Some Todos</button>
+      <!--<button id= "addSomeTodos">Add Some Todos</button>
         <button id="displayTodosButton">Display Todos</button>
         <button id="toggleAllButton">Toggle All</button>-->
 
-        <div>
-          <!--<button onclick="handlers.displayTodos()">Display Todos</button>-->
-          <button onclick="handlers.toggleAll()" class="button_1">Toggle All</button>
-        </div>
-        <div>
-          <button onclick="handlers.addTodo()" class="button_1">Add</button>
-          <input id="addTodoTextInput" type="text" />
-        </div>
-        <div>
-          <button onclick="handlers.changeTodo()" class="button_1">Change Todo</button>
-          <input id="changeTodoPositionInput" type="number" />
-          <input id="changeTodoTextInput" />
-        </div>
-        <!--Version 10 this div has been deleted.
+      <div>
+        <!--<button onclick="handlers.displayTodos()">Display Todos</button>-->
+        <button onclick="handlers.toggleAll()" class="button_1">Toggle All</button>
+      </div>
+      <div>
+        <button onclick="handlers.addTodo()" class="button_1">Add</button>
+        <input id="addTodoTextInput" type="text" />
+      </div>
+      <div>
+        <button onclick="handlers.changeTodo()" class="button_1">Change Todo</button>
+        <input id="changeTodoPositionInput" type="number" placeholder="enter position number" />
+        <input id="changeTodoTextInput" placeholder="enter new todo text"/>
+      </div>
+      <!--Version 10 this div has been deleted.
         <div>
           <button onclick="handlers.deleteTodo()">Delete Todo</button>
           <input id="deleteTodoPositionInput" type="number" />
         </div>-->
-        <div>
-          <button onclick="handlers.toggleCompleted()" class="button_1">Toggle Completed</button>
-          <input id="toggleCompletedPositionInput" type="number" />
-        </div>
-        <div>
-          <ul></ul>
-        </div>
+      <div>
+        <button onclick="handlers.toggleCompleted()" class="button_1">Toggle Completed</button>
+        <input id="toggleCompletedPositionInput" type="number" placeholder="enter position number"/>
       </div>
-    </section>
-    <section class="container">
-      <div id="sourceCode">
-        <h3>
-          Show Code with <stan style="color:brown"><bold>Pre Element! </bold></stan>
-          using Prism, add pre element from "js files" dynamically. Thanks Coach Rob for tip!
-        </h3>
-        <div class="accordion">
-          <input id="tab-1" type="checkbox" name="tab" />
-          <label for="tab-1">Please check version-08 code!</label>
-          <div id="divVersion08" class="accordion_content"></div>
-        </div>
-        <div class="accordion">
-            <input id="tab-2" type="checkbox" name="tab" />
-            <label for="tab-2">Please check version-09 code!</label>
-            <div id="divVersion09" class="accordion_content"></div>
-          </div>
+      <div>
+        <ul></ul>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div id="sourceCode">
+      <h3>
+        Show Code with <stan style="color:brown">
+          <bold>Pre Element! </bold>
+        </stan>
+        using Prism, add pre element from "js files" dynamically.
+      </h3>
+      <div class="accordion">
+        <input id="tab-4" type="checkbox" name="tab" />
+        <label for="tab-4">Please check version-11 code!</label>
+        <div id="divVersion11" class="accordion_content"></div>
       </div>
       <div class="accordion">
         <input id="tab-3" type="checkbox" name="tab" />
         <label for="tab-3">Please check version-10 code!</label>
         <div id="divVersion10" class="accordion_content"></div>
       </div>
-  </div>
-    </section>
-    <footer>
-      <p>ilhan JS3 Week 01 Practical Javascript 2019</p>
-    </footer>
-    <script src="./js/version-01.js"></script>
-    <script src="./js/version-02.js"></script>
-    <script src="./js/version-03.js"></script>
-    <script src="./js/version-04.js"></script>
-    <script src="./js/version-05.js"></script>
-    <script src="./js/version-06.js"></script>
-    <script src="./js/version-07.js"></script>
-    <script src="./js/version-08.js"></script>
-    <script src="./js/version-09.js"></script>
-    <script src="./js/version-10.js"></script>
-  </body>
+      <div class="accordion">
+        <input id="tab-2" type="checkbox" name="tab" />
+        <label for="tab-2">Please check version-09 code!</label>
+        <div id="divVersion09" class="accordion_content"></div>
+      </div>
+      <div class="accordion">
+        <input id="tab-1" type="checkbox" name="tab" />
+        <label for="tab-1">Please check version-08 code!</label>
+        <div id="divVersion08" class="accordion_content"></div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  <footer>
+    <p>ilhan JS3 Week 01 Practical Javascript, Copyright &copy; 2019</p>
+  </footer>
+
+  <script src="./js/version-01.js"></script>
+  <script src="./js/version-02.js"></script>
+  <script src="./js/version-03.js"></script>
+  <script src="./js/version-04.js"></script>
+  <script src="./js/version-05.js"></script>
+  <script src="./js/version-06.js"></script>
+  <script src="./js/version-07.js"></script>
+  <script src="./js/version-08.js"></script>
+  <script src="./js/version-09.js"></script>
+  <script src="./js/version-10.js"></script>
+  <script src="./js/version-11.js"></script>
+</body>
+
 </html>
