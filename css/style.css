@@ -11,7 +11,7 @@ body {
 
 /*Global*/
 .container {
-  width: 90%;
+  width: 95%;
   margin: auto;
   overflow: hidden;
 }
@@ -42,9 +42,26 @@ header .highlight {
 }
 
 #content {
-  width: 50%;
+  width: 95%;
 }
 
+.button_1 {
+  height: 38px;
+  background: #35424a;
+  border: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #ffffff;
+  margin-top: 5px;
+  width: 200px;
+  font-size: 1.1em;
+}
+
+.button_1:hover {
+  height: 40px;
+  background: #f0dc29; /* #4a6270;*/
+  color: #35424a;
+}
 
 /***********Whole Accordion******************/
 .accordion {
@@ -99,4 +116,26 @@ Repeat and read again W3SCHOOL Pseudo-Class and Pseudo-Element Section
 .accordion input:checked ~ .accordion_content {
   max-height: 70vh; /*suddenly we change height then it will be visible because overflow now open*/
   overflow: auto;
+}
+
+
+
+@media (max-width: 768px) {
+  header #brand,
+ .button_1 {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .accordion {
+    max-width: 100%;
+    font-size: 0.8em;
+  }
+  header {
+    padding-bottom: 20px;
+  }
+
+  .box {
+    max-width: 80%;
+  }
 }

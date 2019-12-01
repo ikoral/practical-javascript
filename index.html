@@ -39,23 +39,24 @@
 
         <div>
           <!--<button onclick="handlers.displayTodos()">Display Todos</button>-->
-          <button onclick="handlers.toggleAll()">Toggle All</button>
+          <button onclick="handlers.toggleAll()" class="button_1">Toggle All</button>
         </div>
         <div>
-          <button onclick="handlers.addTodo()">Add</button>
+          <button onclick="handlers.addTodo()" class="button_1">Add</button>
           <input id="addTodoTextInput" type="text" />
         </div>
         <div>
-          <button onclick="handlers.changeTodo()">Change Todo</button>
+          <button onclick="handlers.changeTodo()" class="button_1">Change Todo</button>
           <input id="changeTodoPositionInput" type="number" />
           <input id="changeTodoTextInput" />
         </div>
+        <!--Version 10 this div has been deleted.
         <div>
           <button onclick="handlers.deleteTodo()">Delete Todo</button>
           <input id="deleteTodoPositionInput" type="number" />
-        </div>
+        </div>-->
         <div>
-          <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+          <button onclick="handlers.toggleCompleted()" class="button_1">Toggle Completed</button>
           <input id="toggleCompletedPositionInput" type="number" />
         </div>
         <div>
@@ -80,6 +81,12 @@
             <div id="divVersion09" class="accordion_content"></div>
           </div>
       </div>
+      <div class="accordion">
+        <input id="tab-3" type="checkbox" name="tab" />
+        <label for="tab-3">Please check version-10 code!</label>
+        <div id="divVersion10" class="accordion_content"></div>
+      </div>
+  </div>
     </section>
     <footer>
       <p>ilhan JS3 Week 01 Practical Javascript 2019</p>
@@ -93,5 +100,6 @@
     <script src="./js/version-07.js"></script>
     <script src="./js/version-08.js"></script>
     <script src="./js/version-09.js"></script>
+    <script src="./js/version-10.js"></script>
   </body>
 </html>
